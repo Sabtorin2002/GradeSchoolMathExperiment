@@ -8,9 +8,7 @@ This project explores the use of language models, such as Facebook OPT-125M and 
 - [Dataset](#dataset)
 - [Methodology](#methodology)
 - [Results](#results)
-- [Requirements](#requirements)
 - [Usage](#usage)
-- [License](#license)
 
 ## Introduction
 The Grade School Math (GSM) task requires models to solve basic math problems using natural language understanding. This project implements and evaluates the performance of the following models:
@@ -33,7 +31,7 @@ LoRa is a fine-tuning technique used to efficiently adapt pre-trained models to 
 
 ## Dataset
 The dataset used for this project consists of grade school math problems formatted as text. Key datasets used include:
-- Cleaned training and test sets, such as `clean_main_train.csv` and `facebook125_small_dataset.csv`.
+- Cleaned training and test sets, such as `clean_main_train.csv` and `clean_main_test.csv`.
 - The dataset contains addition, subtraction, multiplication, and division problems.
 
 ## Methodology
@@ -44,13 +42,6 @@ The dataset used for this project consists of grade school math problems formatt
 ## Results
 - The LoRa fine-tuned models demonstrated improved performance over the baseline models in terms of accuracy.
 - Detailed results can be found in the `results` directory or in the associated report.
-
-## Requirements
-To run this project, install the following dependencies:
-
-```bash
-pip install torch transformers datasets
-```
 
 ## Usage
 ### Training
@@ -66,16 +57,4 @@ To fine-tune the models, run the following scripts:
   python LoraFacebook-opt350m.py
   ```
 
-### Evaluation
-Evaluate the fine-tuned models using the provided test scripts:
-
-```bash
-python opt_task_expert_lora.py
-```
-
-### Results
-The results will be stored in the `results` directory.
-
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
 
